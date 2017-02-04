@@ -1,0 +1,89 @@
+package com.gamedrez;
+
+public class CasillaTablero {
+	
+	private String nombre;
+	private CasillaTablero norte;
+	private CasillaTablero noreste;
+	private CasillaTablero este;
+	private CasillaTablero sureste;
+	private CasillaTablero sur;
+	private CasillaTablero suroeste;
+	private CasillaTablero oeste;
+	private CasillaTablero noroeste;
+	private Ficha ficha;
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public CasillaTablero setNombre(String nombre) {
+		this.nombre = nombre;
+		return this;
+	}
+	public CasillaTablero getNorte() {
+		return norte;
+	}
+	public CasillaTablero setNorte(CasillaTablero norte) {
+		this.norte = norte;
+		return this;
+	}
+	public CasillaTablero getNoreste() {
+		return noreste;
+	}
+	public CasillaTablero setNoreste(CasillaTablero noreste) {
+		this.noreste = noreste;
+		return this;
+	}
+	public CasillaTablero getEste() {
+		return este;
+	}
+	public CasillaTablero setEste(CasillaTablero este) {
+		this.este = este;
+		return this;
+	}
+	public CasillaTablero getSureste() {
+		return sureste;
+	}
+	public CasillaTablero setSureste(CasillaTablero sureste) {
+		this.sureste = sureste;
+		return this;
+	}
+	public CasillaTablero getSur() {
+		return sur;
+	}
+	public CasillaTablero setSur(CasillaTablero sur) {
+		this.sur = sur;
+		return this;
+	}
+	public CasillaTablero getSuroeste() {
+		return suroeste;
+	}
+	public CasillaTablero setSuroeste(CasillaTablero suroeste) {
+		this.suroeste = suroeste;
+		return this;
+	}
+	public CasillaTablero getOeste() {
+		return oeste;
+	}
+	public CasillaTablero setOeste(CasillaTablero oeste) {
+		this.oeste = oeste;
+		return this;
+	}
+	public CasillaTablero getNoroeste() {
+		return noroeste;
+	}
+	public CasillaTablero setNoroeste(CasillaTablero noroeste) {
+		this.noroeste = noroeste;
+		return this;
+	}
+	public Ficha getFicha() {
+		return ficha;
+	}
+	public void setFicha(Ficha ficha) {
+		this.ficha = ficha;
+	}
+	public boolean casillaVacia(){
+		if(this.ficha == null){return true;}else{return false;}
+	}
+
+}

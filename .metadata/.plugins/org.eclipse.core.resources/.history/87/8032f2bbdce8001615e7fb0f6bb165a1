@@ -1,0 +1,106 @@
+package com.gamedrez;
+
+import java.util.ArrayList;
+
+import com.tatedrez.Casilla;
+import com.tatedrez.PosicionesEnum;
+
+public class TableroJuego {
+
+	private CasillaTablero CasillaCentral;
+	private CasillaTablero CasillaNorte;
+	private CasillaTablero CasillaNoreste;
+	private CasillaTablero CasillaEste;
+	private CasillaTablero CasillaSureste;
+	private CasillaTablero CasillaSur;
+	private CasillaTablero CasillaSuroeste;
+	private CasillaTablero CasillaOeste;
+	private CasillaTablero CasillaNoroeste;
+
+	public TableroJuego() {
+
+		this.CasillaCentral = new CasillaTablero();
+		this.CasillaNorte = new CasillaTablero();
+		this.CasillaNoreste = new CasillaTablero();
+		this.CasillaEste = new CasillaTablero();
+		this.CasillaSureste = new CasillaTablero();
+		this.CasillaSur = new CasillaTablero();
+		this.CasillaSuroeste = new CasillaTablero();
+		this.CasillaOeste = new CasillaTablero();
+		this.CasillaNoroeste = new CasillaTablero();
+
+		CasillaCentral.setNombre("CasillaCentral").setNorte(CasillaNorte).setNoreste(CasillaNoreste).setEste(CasillaEste).setSureste(CasillaSureste)
+				.setSur(CasillaSur).setSuroeste(CasillaSuroeste).setOeste(CasillaOeste).setNoroeste(CasillaNoroeste);
+
+		CasillaNorte.setNombre("CasillaNorte").setEste(CasillaNoreste).setSureste(CasillaEste).setSur(CasillaCentral).setSuroeste(CasillaOeste)
+				.setOeste(CasillaNoroeste);
+
+		CasillaNoreste.setNombre("CasillaNoreste").setSur(CasillaEste).setSuroeste(CasillaCentral).setOeste(CasillaNorte);
+
+		CasillaEste.setNombre("CasillaEste").setNorte(CasillaNoroeste).setNoroeste(CasillaNorte).setOeste(CasillaCentral).setSuroeste(CasillaSur)
+				.setSur(CasillaSuroeste);
+
+		CasillaSureste.setNombre("CasillaSureste").setNorte(CasillaEste).setNoreste(CasillaCentral).setOeste(CasillaSur);
+
+		CasillaSur.setNombre("CasillaSur").setEste(CasillaSureste).setNoroeste(CasillaEste).setNorte(CasillaCentral).setNoreste(CasillaOeste).setOeste(CasillaSuroeste);
+
+		CasillaSuroeste.setNombre("CasillaSuroeste").setEste(CasillaSur).setNoreste(CasillaCentral).setNorte(CasillaOeste);
+
+		CasillaOeste.setNombre("CasillaOeste").setSur(CasillaSuroeste).setSureste(CasillaSur).setEste(CasillaCentral).setNoreste(CasillaNorte).setNorte(CasillaNoroeste);
+
+		CasillaNoroeste.setNombre("CasillaNoroeste").setEste(CasillaNorte).setSureste(CasillaCentral).setSur(CasillaOeste);
+	}
+	public boolean insertarFichaEnCasilla(Ficha ficha, PosicionesEnum posicion){
+		CasillaTablero casilla = this.getCasillaBy(posicion);
+		
+		if(casilla.getFicha() == null){
+			casilla.setFicha(ficha);
+			ficha.setPosicion(posicion);
+			return true;
+		}else{return false;}
+	}
+	
+	public Ficha getFichaEnPosicion(PosicionesEnum posicion){
+		return this getCasillasBy(posicion).getFicha();
+	}
+	public boolean casillasVacias(ArrayList<PosicionesEnum> lista) {
+
+		for (int i = 0;i< lista.size();i++){
+			PosicionesEnum posicion=lista.get(i);
+			CasillaTablero casilla=this.getCasillaBy(posicion);
+			boolean siEstaVacia = casilla.casillaVacia();
+			if(siEstaVacia==true){}
+			else{return false;}
+			
+		}
+		public Casilla getCasillaBy(PosicionesEnum posicion) {
+			if (posicion == PosicionesEnum.NORTE) {
+				return this.getNorte();
+			}
+			if (posicion == PosicionesEnum.NORESTE) {
+				return this.getNoreste();
+			}
+			if (posicion == PosicionesEnum.ESTE) {
+				return this.getEste();
+			}
+			if (posicion == PosicionesEnum.SURESTE) {
+				return this.getSureste();
+			}
+			if (posicion == PosicionesEnum.SUR) {
+				return this.getSur();
+			}
+			if (posicion == PosicionesEnum.SUROESTE) {
+				return this.getSuroeste();
+			}
+			if (posicion == PosicionesEnum.OESTE) {
+				return this.getOeste();
+			}
+			if (posicion == PosicionesEnum.NOROESTE) {
+				return this.getNoroeste();
+			}
+
+			return null;
+		}	
+	
+
+}

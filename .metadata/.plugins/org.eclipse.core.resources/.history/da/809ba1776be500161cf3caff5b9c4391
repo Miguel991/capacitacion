@@ -1,0 +1,14 @@
+package com.arreglos;
+
+public class Parent()
+{
+
+public static void main(String[] args) {
+	int i = 2;
+
+	if (i++ <= 3 && ++i > 4)
+		i = 3;
+
+	System.out.println(i);
+}
+}

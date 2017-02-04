@@ -1,0 +1,24 @@
+package com.ejercicios;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class PersonaTest {
+	
+	Persona persona;
+	
+	@Before
+	public void setUp(){
+		persona = new Persona("Mario",23,'F');
+	}
+
+	@Test
+	public void test() {
+		persona.generaDni();
+		System.out.println(persona);
+		
+	}
+
+}

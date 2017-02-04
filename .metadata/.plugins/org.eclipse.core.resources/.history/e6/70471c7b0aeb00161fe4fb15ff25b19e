@@ -1,0 +1,40 @@
+package com.ejercicios;
+
+import javax.swing.JOptionPane;
+
+public class Ejecutable {
+	
+	public static void main(String[] args){
+		
+		String nombre = JOptionPane.showInputDialog("Ingrese su nombre: ");
+		System.out.println(nombre);
+		
+		int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su edad: "));
+		System.out.println(edad);
+		
+		String texto = JOptionPane.showInputDialog("Ingrese la inicial de su sexo: ");
+		char sexo = texto.charAt(0);
+		System.out.println(sexo);
+		
+		double peso = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su peso Actual: "));
+		System.out.println(peso);
+		
+		double altura = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su estatura: "));
+		System.out.println(altura);
+		
+		Persona Mario = new Persona(nombre,edad,sexo,peso,altura);
+		Persona jose = new Persona(nombre,edad,sexo);
+		Persona juan = new Persona();
+		
+		juan.setAltura(180);
+		juan.setEdad(12);
+		juan.setNombre("Juan");
+		juan.setPeso(70);
+		juan.setSexo('M');
+		
+
+
+		
+	}
+
+}

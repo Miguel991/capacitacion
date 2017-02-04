@@ -1,0 +1,36 @@
+package com.tatedrez;
+
+import java.util.ArrayList;
+
+public class Tablero {
+
+	private ArrayList<Casilla> listaCasillas;
+
+	public Tablero() {
+		//String nombre, Casilla norte, Casilla noreste, Casilla este, Casilla sureste, Casilla sur,
+		//Casilla suroeste, Casilla oeste, Casilla noroeste
+		Casilla central  = new Casilla();
+	    Casilla norte    = new Casilla();
+		Casilla noreste  = new Casilla();
+		Casilla este     = new Casilla();
+		Casilla sureste  = new Casilla();
+		Casilla sur      = new Casilla();
+		Casilla suroeste = new Casilla();
+		Casilla oeste    = new Casilla();
+	    Casilla noroeste = new Casilla();
+	    
+	    central.setEste(este);
+	    central.setEste(oeste);
+	    central.setEste(norte);
+	    central.setEste(sur);
+	    central.setEste(este);
+	    central.setEste(este);
+	    central.setEste(este);
+	    central.setEste(este);
+	    
+	    central.setEste(este).
+	    
+
+	}
+
+}

@@ -1,0 +1,116 @@
+package com.tatedrez;
+
+public class Casilla {
+
+	private String nombre;
+
+	private Casilla norte;
+	private Casilla noreste;
+	private Casilla este;
+	private Casilla sureste;
+	private Casilla sur;
+	private Casilla suroeste;
+	private Casilla oeste;
+	private Casilla noroeste;
+	
+	private Ficha torre;
+
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public Casilla setNombre(String nombre) {
+		this.nombre = nombre;
+		return this;
+	}
+
+	public Casilla getNorte() {
+		return norte;
+	}
+
+	public Casilla setNorte(Casilla norte) {
+		this.norte = norte;
+		return this;
+	}
+
+	public Casilla getNoreste() {
+		return noreste;
+	}
+
+	public Casilla setNoreste(Casilla noreste) {
+		this.noreste = noreste;
+		return this;
+	}
+
+	public Casilla getEste() {
+		return este;
+
+	}
+
+	public Casilla setEste(Casilla este) {
+		this.este = este;
+		return this;
+
+	}
+
+	public Casilla getSureste() {
+		return sureste;
+	}
+
+	public Casilla setSureste(Casilla sureste) {
+		this.sureste = sureste;
+		return this;
+
+	}
+
+	public Casilla getSur() {
+		return sur;
+	}
+
+	public Casilla setSur(Casilla sur) {
+		this.sur = sur;
+		return this;
+
+	}
+
+	public Casilla getSuroeste() {
+		return suroeste;
+	}
+
+	public Casilla setSuroeste(Casilla suroeste) {
+		this.suroeste = suroeste;
+		return this;
+
+	}
+
+	public Casilla getOeste() {
+		return oeste;
+	}
+
+	public Casilla setOeste(Casilla oeste) {
+		this.oeste = oeste;
+		return this;
+
+	}
+
+	public Casilla getNoroeste() {
+		return noroeste;
+	}
+
+	public Casilla setNoroeste(Casilla noroeste) {
+		this.noroeste = noroeste;
+		return this;
+
+	}
+
+	public Ficha getTorre() {
+		return torre;
+	}
+
+	public void setTorre(Ficha torre) {
+		this.torre = torre;
+	}
+
+}

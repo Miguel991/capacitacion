@@ -1,0 +1,8 @@
+package com.tatedrez;
+
+public class Tablero {
+	
+	 private Arraylist<Casilla> listaCasillas;
+
+
+}

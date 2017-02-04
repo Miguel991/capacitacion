@@ -1,0 +1,76 @@
+package com.ejercicios;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Ejecutable {
+
+	public static void main(String[] args) {
+
+		String nombre = JOptionPane.showInputDialog("Ingrese su nombre: ");
+		System.out.println(nombre);
+
+		int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su edad: "));
+		System.out.println(edad);
+
+		String texto = JOptionPane.showInputDialog("Ingrese la inicial de su sexo: ");
+		char sexo = texto.charAt(0);
+		System.out.println(sexo);
+
+		double peso = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su peso Actual: "));
+		System.out.println(peso);
+
+		double altura = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su estatura: "));
+		System.out.println(altura);
+
+		Persona mario = new Persona(nombre, edad, sexo, peso, altura);
+		Persona jose = new Persona(nombre, edad, sexo);
+		Persona juan = new Persona();
+		
+		ArrayList<Persona> lista = new ArrayList<Persona>();
+		lista.add(mario);
+		lista.add(jose);
+		lista.add(juan);
+		
+
+		juan.setAltura(180);
+		juan.setEdad(12);
+		juan.setNombre("Juan");
+		juan.setPeso(70);
+		juan.setSexo('M');
+		
+		/*for(int i = 0; i<lista.size();i++){
+			Persona personaActual= lista.get(i);
+			int IndiceDeMasaCorporal = lista.get(i).calcularImc(lista.get(i).getPeso(), lista.get(i).geAltura());
+			if(IndiceDeMasaCorporal == -1){
+				System.out.println("Esta por debajo de su peso ideal");
+			}else if(IndiceDeMasaCorporal == 0){
+				System.out.println("Su peso es el ideal para su estatura");
+			}else{System.out.println("Usted tiene sobrepeso");}
+		}*/
+		
+		for(Persona unaPersona:lista){
+			int indiceDeMasaCorporal= unaPersona.calcularImc(unaPersona.getPeso(), unaPersona.getAltura());
+			if(indiceDeMasaCorporal == -1){
+				System.out.println(unaPersona.getNombre() +" Esta por debajo de su peso ideal.");
+			}else if(indiceDeMasaCorporal == 0){
+				System.out.println(unaPersona.getNombre()+ " tiene el peso ideal para su estatura.");
+			}else{System.out.println(unaPersona.getNombre()+ " tiene sobrepeso.");
+			}
+		}
+		
+/*
+		int indiceDeMasaCorporalJuan = juan.calcularImc(juan.getPeso(), juan.getAltura());
+		if (indiceDeMasaCorporalJuan == -1) {
+			System.out.println("Esta por debajo de su peso ideal");
+		}
+		else if (indiceDeMasaCorporalJuan == 0) {
+			System.out.println("Esta en su peso ideal");
+		} else {
+			System.out.println("Tiene Sobrepeso");
+		}*/
+
+	}
+
+}

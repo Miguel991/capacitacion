@@ -1,0 +1,7 @@
+package com.tatedrez;
+
+public interface Ficha {
+	
+	public boolean mover();
+
+}

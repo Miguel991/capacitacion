@@ -1,0 +1,17 @@
+package com.ejercicios;
+
+import javax.swing.JOptionPane;
+
+public class Ejecutable {
+	
+	public static void main(String[] args){
+		
+		String nombre = JOptionPane.showInputDialog("Ingrese su nombre: ");
+		System.out.println(nombre);
+		
+		int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su edad: "));
+		System.out.println(edad);
+		
+	}
+
+}

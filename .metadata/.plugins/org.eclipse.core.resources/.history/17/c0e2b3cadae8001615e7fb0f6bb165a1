@@ -1,0 +1,6 @@
+package com.gamedrez;
+
+public class Torre implements Ficha {
+	private String nombreTorre = "Torre";
+
+}

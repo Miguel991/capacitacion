@@ -1,0 +1,19 @@
+package com.tatedrez;
+
+public class Alfil implements Ficha {
+
+	private String nombre = "Alfil";
+
+	@Override
+	public boolean mover() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return this.nombre;
+	}
+
+}

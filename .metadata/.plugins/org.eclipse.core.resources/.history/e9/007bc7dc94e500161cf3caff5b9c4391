@@ -1,0 +1,50 @@
+package com.tatedrez.test;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.tatedrez.Ficha;
+import com.tatedrez.PosicionesEnum;
+import com.tatedrez.Tablero;
+import com.tatedrez.Torre;
+
+public class TestTablero {
+
+	private Tablero tablero;
+	private Ficha torre;
+
+	@Before
+	public void setUp() {
+		tablero = new Tablero();
+		torre = new Torre();
+
+	}
+
+	@Test
+	public void testCasillaNorte() {
+		Assert.assertEquals(tablero.getNorte().getNombre(), "norte");
+
+	}
+
+	@Test
+	public void testCasillaSur() {
+		System.out.println(tablero.getSur().getSur());
+		Assert.assertEquals(tablero.getSur().getSur(), null);
+
+	}
+	
+	@Test
+	public void testDireccionamientoANorteconFicha() {
+		Assert.assertEquals(tablero.insertarFicha(torre, PosicionesEnum.NORTE), true);
+
+    }
+	
+	@Test
+	public void testInsertarTorreEnNorte() {
+		tablero.insertarFicha(torre, PosicionesEnum.NORTE);
+		Assert.assertEquals(tablero.getNorte().getFicha().getNombre(), "Torre");
+	}
+}	
+	
+	

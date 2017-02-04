@@ -1,0 +1,5 @@
+package com.tatedrez;
+
+public class Caballo implements Movible {
+
+}

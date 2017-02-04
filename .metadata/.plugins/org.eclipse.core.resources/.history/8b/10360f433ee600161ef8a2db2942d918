@@ -1,0 +1,16 @@
+package com.tatedrez.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TorreTest {
+
+	
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+
+}

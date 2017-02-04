@@ -1,0 +1,28 @@
+package com.gamedrez;
+
+public class Torre implements Ficha {
+	private String nombreTorre = "Torre";
+	private PosicionesEnum posicion;
+
+	@Override
+	public boolean mover() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return nombreTorre;
+	}
+	public void setNombre(String nombre){
+		this.nombreTorre = nombre;
+	}
+
+	@Override
+	public void setPosicion(PosicionesEnum posicion) {
+		this.posicion = posicion;
+		
+	}
+
+}

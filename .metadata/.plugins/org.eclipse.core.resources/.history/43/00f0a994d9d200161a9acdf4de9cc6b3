@@ -1,0 +1,6 @@
+package com.prueba;
+
+public class HolaMundo {
+
+	System.out.println("hola");
+}

@@ -1,0 +1,139 @@
+package com.tatedrez;
+
+import java.util.ArrayList;
+
+public class Tablero {
+
+	private Casilla central;
+	private Casilla norte;
+	private Casilla noreste;
+	private Casilla este;
+	private Casilla sureste;
+	private Casilla sur;
+	private Casilla suroeste;
+	private Casilla oeste;
+	private Casilla noroeste;
+
+	private ArrayList<Casilla> listaCasillas;
+	
+	private enum posiciones = {};
+
+	public Tablero() {
+
+		// String nombre, Casilla norte, Casilla noreste, Casilla este, Casilla
+		// sureste, Casilla sur,
+		// Casilla suroeste, Casilla oeste, Casilla noroeste
+		this.central = new Casilla();
+		this.norte = new Casilla();
+		this.noreste = new Casilla();
+		this.este = new Casilla();
+		this.sureste = new Casilla();
+		this.sur = new Casilla();
+		this.suroeste = new Casilla();
+		this.oeste = new Casilla();
+		this.noroeste = new Casilla();
+
+		central.setNombre("central").setNorte(norte).setNoreste(noreste).setEste(este).setSureste(sureste).setSur(sur)
+				.setSuroeste(suroeste).setOeste(oeste).setNoroeste(noroeste);
+
+		norte.setNombre("norte").setEste(noreste).setSureste(este).setSur(central).setSuroeste(oeste)
+				.setOeste(noroeste);
+
+		noreste.setNombre("noreste").setSur(este).setSuroeste(central).setOeste(norte);
+
+		este.setNombre("este").setNorte(noroeste).setNoroeste(norte).setOeste(central).setSuroeste(sur)
+				.setSur(suroeste);
+
+		sureste.setNombre("sureste").setNorte(este).setNoreste(central).setOeste(sur);
+
+		sur.setNombre("sur").setEste(sureste).setNoroeste(este).setNorte(central).setNoreste(oeste).setOeste(suroeste);
+
+		suroeste.setNombre("suroeste").setEste(sur).setNoreste(central).setNorte(oeste);
+
+		oeste.setNombre("oeste").setSur(suroeste).setSureste(sur).setEste(central).setNoreste(norte).setNorte(noroeste);
+
+		noroeste.setNombre("noroeste").setEste(norte).setSureste(central).setSur(oeste);
+
+	}
+
+	public Casilla getCentral() {
+		return central;
+	}
+
+	public void setCentral(Casilla central) {
+		this.central = central;
+	}
+
+	public Casilla getNorte() {
+		return norte;
+	}
+
+	public void setNorte(Casilla norte) {
+		this.norte = norte;
+	}
+
+	public Casilla getNoreste() {
+		return noreste;
+	}
+
+	public void setNoreste(Casilla noreste) {
+		this.noreste = noreste;
+	}
+
+	public Casilla getEste() {
+		return este;
+	}
+
+	public void setEste(Casilla este) {
+		this.este = este;
+	}
+
+	public Casilla getSureste() {
+		return sureste;
+	}
+
+	public void setSureste(Casilla sureste) {
+		this.sureste = sureste;
+	}
+
+	public Casilla getSur() {
+		return sur;
+	}
+
+	public void setSur(Casilla sur) {
+		this.sur = sur;
+	}
+
+	public Casilla getSuroeste() {
+		return suroeste;
+	}
+
+	public void setSuroeste(Casilla suroeste) {
+		this.suroeste = suroeste;
+	}
+
+	public Casilla getOeste() {
+		return oeste;
+	}
+
+	public void setOeste(Casilla oeste) {
+		this.oeste = oeste;
+	}
+
+	public Casilla getNoroeste() {
+		return noroeste;
+	}
+
+	public void setNoroeste(Casilla noroeste) {
+		this.noroeste = noroeste;
+	}
+
+	public ArrayList<Casilla> getListaCasillas() {
+		return listaCasillas;
+	}
+
+	public void setListaCasillas(ArrayList<Casilla> listaCasillas) {
+		this.listaCasillas = listaCasillas;
+	}
+
+}

@@ -1,0 +1,36 @@
+package com.tatedrez.test;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.tatedrez.Tablero;
+
+public class TestTablero {
+
+	private Tablero tablero;
+
+	@Before
+	public void setUp() {
+		tablero = new Tablero();
+
+	}
+
+	@Test
+	public void testCasillaNorte() {
+		Assert.assertEquals(tablero.getNorte().getNombre(), "norte");
+
+	}
+
+	@Test
+	public void testCasillaSur() {
+		System.out.println(tablero.getSur().getSur());
+		Assert.assertEquals(tablero.getSur().getSur(), null);
+
+	}
+	
+	@Test
+	public void testInsertarFicha() {
+		Assert.assertEquals(tablero.getSur().getSur(), null);
+
+    }

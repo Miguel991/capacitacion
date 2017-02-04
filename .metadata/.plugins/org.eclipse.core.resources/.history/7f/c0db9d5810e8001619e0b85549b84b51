@@ -1,0 +1,13 @@
+package com.ejercicios;
+
+import javax.swing.JOptionPane;
+
+public class PersonaMain {
+	
+	public static void main(String[] args){
+		
+		String nombre=JOptionPane.showInputDialog("Introduce el nombre");
+		System.out.println(nombre);
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.tatedrez;
+
+public class Torre implements Ficha {
+
+	private String nombre = "Torre";
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	@Override
+	public boolean mover() {
+
+		return false;
+	}
+
+}

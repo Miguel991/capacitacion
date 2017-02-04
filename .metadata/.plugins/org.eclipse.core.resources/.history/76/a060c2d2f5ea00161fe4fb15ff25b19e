@@ -1,0 +1,14 @@
+package com.ejercicios;
+
+import javax.swing.JOptionPane;
+
+public class Ejecutable {
+	
+	public static void main(String[] args){
+		
+		String texto = JOptionPane.showInputDialog ("Ingrese un texto: ", "showInputDialog",JOptionPane.INFORMATION_MESSAGE);
+	
+		
+	}
+
+}

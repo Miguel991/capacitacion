@@ -1,0 +1,9 @@
+package com.tatedrez;
+
+public interface Movible {
+	
+	public mover(){
+		
+	}
+
+}

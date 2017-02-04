@@ -1,0 +1,33 @@
+package com.ejercicios;
+
+public class Persona {
+
+	private String nombre = "";
+	private int edad = 0;
+	private int DNI = 0;
+	private String sexo = "";
+	private int peso = 0;
+	private int altura = 0;
+
+	public Persona() {
+
+	}
+
+	public Persona(String nombre,int edad,String sexo) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.sexo = sexo;
+
+	}
+
+	public Persona(String nombre, int edad, String sexo, int DNI, int peso, int altura) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.sexo = sexo;
+		this.DNI = DNI;
+		this.peso = peso;
+		this.altura = altura;
+
+	}
+
+}

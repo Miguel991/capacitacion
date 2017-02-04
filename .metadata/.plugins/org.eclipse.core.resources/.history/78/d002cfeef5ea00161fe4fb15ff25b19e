@@ -1,0 +1,13 @@
+package com.ejercicios;
+
+import javax.swing.JOptionPane;
+
+public class Ejecutable {
+	
+	public static void main(String[] args){
+		
+		String nombre = JOptionPane.showInputDialog("Ingrese su nombre: ");
+		
+	}
+
+}

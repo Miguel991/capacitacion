@@ -1,0 +1,11 @@
+package com.tatedrez;
+
+public class Caballo implements Movible {
+
+	@Override
+	public boolean mover() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
